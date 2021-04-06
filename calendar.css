@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(235, 235, 235);
+}
+
+.displayDate {
+    width: 200px;
+    align-items: center;
+}
+
+.calendar {
+    width: 50vw;
+    height: 62vh;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    box-shadow: 0px 0px 40px rgb(156, 156, 156);
+}
+
+.months {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgb(80, 3, 80);
+    padding: 40px 30px;
+    border-radius: 20px 20px 0 0;
+}
+
+.day {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px;
+    background-color: rgb(148, 68, 148);
+    display: flex;
+}
+
+.day div {
+    text-align: center;
+    width: 14.28%;
+}
+
+.today {
+    border-radius: 10px;
+    background-color: rgb(148, 68, 148);
+    color: #fff;
+}
+
+.date {
+    font-weight: 300;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.prev_date {
+    color: #999;
+}
+
+.date div {
+    border-radius: 10px;
+    text-align: center;
+    width: 14.28%;
+}
+
+.date div {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    transition: all 0.4s;
+}
+
+.date div:hover {
+    padding: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(80, 3, 80);
+    background-color: #dfe6e9;
+    transform: translateY(-4px);
+}
+
+.prev,
+.next {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all, 0.4s;
+    font-size: 30px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.next:hover {
+    transform: translateX(10px);
+}
+
+.prev:hover {
+    transform: translateX(-10px);
+}
+
+@media only screen and (max-width: 800px) {
+    .day {
+        letter-spacing: normal;
+    }
+    .prev,
+    .next {
+        height: fit-content;
+        border-radius: 0;
+    }
+    .prev:hover,
+    .next:hover {
+        background-color: transparent;
+    }
+    .calendar {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: 0 0 0 white;
+    }
+    .months {
+        width: 100vw;
+        border-radius: 0;
+    }
+    .day {
+        width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 1000) and (max-width: 1300px) {
+    .calendar {
+        width: 90vw;
+        height: 50vh;
+    }
+    .months {
+        width: 90vw;
+    }
+    .day {
+        width: 90vw;
+    }
+}
