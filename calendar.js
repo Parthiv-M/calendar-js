@@ -40,19 +40,21 @@ function renderDate() {
 
 }
 
+//function to change the date in date-str to the one clicked by the user 
 function display() {
     var x = this.innerHTML;
     var p = new Date(dt.getFullYear(), dt.getMonth(), x);
     document.getElementById("date-str").innerHTML = p.toDateString();
 }
 
+//function to navigate between the months
 function moveDate(para) {
     if (para == 'prev') {
         dt.setMonth(dt.getMonth() - (1));
     } else if (para == 'next') {
-        dt.setMonth(dt.getMonth() + 1);
+        dt.setMonth(dt.getMonth() + (1));
     }
-    var x = new Date();
-    document.getElementsByClassName("date-str").innerHTML = x.toDateString();
+    var A= new Date();
+    document.getElementsByClassName("date-str").innerHTML = A.toDateString();
     renderDate();
 }
