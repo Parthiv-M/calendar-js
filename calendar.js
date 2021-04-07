@@ -22,7 +22,7 @@ function renderDate() {
     }
 
     for (i = 1; i <= endDate; i++) {
-        if (today.getDate() == i && dt.getMonth() == today.getMonth())
+        if (today.getDate() == i && dt.getMonth() == today.getMonth() && dt.getFullYear()==today.getFullYear())
             cell += "<div class = 'today pal'>" + (i) + "</div>";
         else
             cell += "<div class = 'pal'>" + (i) + "</div>";
