@@ -23,14 +23,14 @@ function renderDate() {
 
     for (i = 1; i <= endDate; i++) {
         if (today.getDate() == i && dt.getMonth() == today.getMonth() && dt.getFullYear()==today.getFullYear())
-            cell += "<div class = 'today pal'>" + (i) + "</div>";
+            cell += "<div class = 'today current_month'>" + (i) + "</div>";
         else
-            cell += "<div class = 'pal'>" + (i) + "</div>";
+            cell += "<div class = 'current_month'>" + (i) + "</div>";
     }
 
     document.getElementsByClassName("date")[0].innerHTML = cell;
 
-    var divs = document.getElementsByClassName("pal");
+    var divs = document.getElementsByClassName("current_month");
 
     for (i = 0; i < divs.length; i++)
         divs[i].setAttribute("id", i + 1);
